@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}" >
+        <link rel="stylesheet" href="{% static "css/styles.css" %}">
+        <title>Unauthorized</title>
+    </head>
+
+    <body class="text-center">
+        <div id="small-container">
+            <img class="company_logo" src="{% static "img/eureka_logo.png" %}">
+            <hr>
+            <h4 id="page_title">404: Page Not Found</h4>
+            <hr>
+            <div class="container">
+                <strong>Page does not exist!</strong>
+                <hr>
+                <button type="button" class="btn btn-block btn-primary" onclick="location.href='{% url 'login' %}'">Log In</button>
+            </div>
+        </div>
+    </body>
+</html>

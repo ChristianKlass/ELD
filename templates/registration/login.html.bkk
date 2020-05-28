@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+</head>
+<body>
+
+    <div class="container" id="main-container">
+        <form method="post" action="{% url 'login' %}">{% csrf_token %}
+            <div class="form-group">
+                <label for="txtUsername">Username</label>
+                <input type="text" class="form-control" id="txtUsername"
+                       placeholder="johndoe">
+            </div>
+
+            <div class="form-group">
+                <label for="txtPassword">Password</label>
+                <input type="password" class="form-control"
+                       id="txtPassword" placeholder="Password"
+                       aria-describedby="passwordHelpBlock">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                    Your password must be 8-20 characters long,
+                    contain letters and numbers, and must not contain spaces,
+                    special characters, or emoji.
+                </small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

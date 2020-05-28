@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div id="small-container">
+        <img class="company_logo img-fluid rounded mx-auto d-block"
+         src="{% static 'img/eureka_logo.png' %}"  alt="company-logo"/>
+        <hr />
+
+{#        {% if user.is_authenticated %}#}
+{#            <meta http-equiv="REFRESH" content="0;url={{ 'index' }}">#}
+{#        {% endif %}#}
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="username_icon">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+                <input type="text" class="form-control" id="id_username"
+                   placeholder="Username" name="username" aria-describedby="username_icon" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="password_icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </div>
+                <input type="password" class="form-control"
+                   id="id_password" name="password" placeholder="Password"
+                   aria-describedby="password_icon" required>
+            </div>
+
+            <button type="submit" class="btn btn-block btn-lg btn-primary" id="btnSubmit">Log In</button>
+        </form>
+    </div>
+
+{% endblock %}

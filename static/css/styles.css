@@ -1,0 +1,83 @@
+#small-container {
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    max-width: 500px
+}
+
+#main-container {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1080px
+}
+
+.company_logo {
+    width: 100%;
+    max-width: 340px;
+}
+
+#btnSubmit {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.breadcrumb {
+    margin-top: 1%;
+}
+
+.breadcrumb-item {
+    font-size: small;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
+
+.upload-box {
+    margin-top: 1%;
+    max-height: 60px;
+}
+
+#upload {
+    opacity: 0;
+}
+
+#upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-area {
+    border: 2px dashed rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Uploaded image result';
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+#imageResult {
+    width: 100%;
+    max-width: 300px;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
