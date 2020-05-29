@@ -33,10 +33,13 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
     'lucky_draw',
+    'photologue',
+    'sortedm2m',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +133,5 @@ LOGOUT_REDIRECT_URL = '/login'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+SITE_ID = 1
