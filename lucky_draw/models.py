@@ -1,6 +1,6 @@
-from django.db import models
 import random
-from datetime import datetime
+
+from django.db import models
 
 
 # Create your models here.
@@ -8,6 +8,7 @@ class Event(models.Model):
     """Event"""
     name = models.CharField(max_length=100)
     total_number_of_winners = models.IntegerField(default=random.randint(30, 100))
+    created_by = models.CharField(max_length=100)
 
     """To print human readable name when you refer to yourself (Apocalypse instead of Event 003)"""
     def __str__(self):
